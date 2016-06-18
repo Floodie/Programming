@@ -12,7 +12,7 @@ int main()
 	int R[16];
 	int length;
 
-	for(int i=0;number > 1; i++)
+	for(int i=0;number > 0; i++)
 	{
 		R[i]=number%10;
 		number=(number-number%10)/10;
