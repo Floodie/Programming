@@ -1,51 +1,34 @@
-//DODELAT'
-//http://cppstudio.com/post/2629/
+//http://cppstudio.com/post/1448/
 #include <iostream>
-#include <cmath>
 #include <conio.h>
 using namespace std;
 
-
-void main0(int lenO, int x)
-{
-  for(int i=0;i<x;i++)cout<<" ";
-  cout<<"*";
-  for(int i=0;i!=(lenO/2-x-1)*2;i++)cout<<" ";
-  cout<<"*"<<endl;
-  if(x>0)main0(lenO, x-1);
-  for(int i=0;i<x;i++)cout<<" ";
-  cout<<"*";
-  for(int i=0;i!=(lenO/2-x-1)*2;i++)cout<<" ";
-  cout<<"*"<<endl;
-}
-
-void main1(int lenO, int x)
-{
-  for(int i=0;i<x;i++)cout<<" ";
-  cout<<"*";
-  for(int i=0;i!=(lenO/2-x)*2;i++)cout<<" ";
-  if(lenO/2-1!=x)cout<<"*";
-  cout<<endl;
-  if(x>0)main1(lenO, x-1);
-
-  if(x>0)
-    {
-  for(int i=0;i<x;i++)cout<<" ";
-  cout<<"*";
-  for(int i=0;i!=(lenO/2-x)*2;i++)cout<<" ";
-  if(lenO/2-1!=x)cout<<"*"<<endl;
-    }
-  //else{cout<<endl;}
-}
-
 int main()
 {
+  int number;
+  int symbol[10];
   int length;
-  cin>>length;
+  int cifra;
+  cout<<"Vvedite chislo: ";
+  cin>>number;
+  cout<<"Vvedite poryadkoviyu nimer cifri: ";
+  cin>>cifra;
   
-  if(length%2==0)main0(length, length/2-1);
-  else{main1(length, length/2);}
+  for(int i=0;number>=1;++i)
+    {
+      symbol[i]=number%10;
+      number=(number-number%10)/10;
+      length=i;
+    }
+
+  for(int i=0;i<length/2+1;i++)
+    {
+      int old=symbol[i];
+      symbol[i]=symbol[length-i];
+      symbol[length-i]=old;
+    }
+
+  cout<<"Eto "<<symbol[cifra-1];
 
   getch();
-  return 0;
 }
