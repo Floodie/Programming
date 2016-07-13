@@ -1,1 +1,116 @@
 g++ main.cpp -o main.exe -lsfml-graphics -lsfml-window -lsfml-system
+#include <SFML/Graphics.hpp>
+#include <fstream>
+#include <iostream>
+#include <windows.h>
+
+using namespace std;
+using namespace sf;
+
+int main()
+{
+  sf::RenderWindow window(sf::VideoMode(640, 640), "Test program by Floodie");
+
+  while (window.isOpen())
+    {
+
+      sf::Event event;
+      while (window.pollEvent(event))
+        {
+	  if (event.type == sf::Event::Closed)
+	    window.close();
+        }
+      window.clear();
+      window.display();
+    }
+
+  return 0;
+}
+
+/*
+/////////////////////////////////////
+//Рисование круга/окружности
+/////////////////////////////////////
+sf::CircleShape shape(100.f);
+shape.setFillColor(sf::Color::Green);
+...
+window.draw(shape);
+
+
+
+
+
+/////////////////////////////////////
+//Загрузка изображения
+/////////////////////////////////////
+Image i;
+i.loadFromFile("1.png");
+
+Texture t;
+t.loadFromImage(i);
+
+Sprite s;
+s.setTexture(t);
+s.setPosition(20,20);
+..
+window.draw(s);
+///////////////Другой способ
+Texture t;
+t.loadFromFile("1.png");
+
+Sprite s;
+s.setTexture(t);
+s.setPosition(20,20);
+..
+window.draw(s);
+
+
+
+
+
+/////////////////////////////////////
+//Нажатие клавишь\клавиатура
+/////////////////////////////////////
+после второго while
+if(Keyboard::isKeyPressed(Keyboard::Left)){}
+
+
+
+
+/////////////////////////////////////
+//Перемещение/мув/move/движение
+/////////////////////////////////////
+(название).move(x, y);
+
+
+
+
+
+/////////////////////////////////////
+//Нажатие мышки\мышка
+/////////////////////////////////////
+Так-же после 2 while 
+if(Mouse::isButtonPressed(sf::Mouse::Left)){s.setColor(Color::Red);}
+
+
+
+
+
+
+/////////////////////////////////////
+//Прямоугольник/rectangle
+/////////////////////////////////////
+sf::RectangleShape rectangle(sf::Vector2f(0, 0));
+rectangle.setSize(sf::Vector2f(100, 100));
+
+
+
+
+
+
+
+/////////////////////////////////////
+//Rotate/вращение/вращать/поворачтьвать
+/////////////////////////////////////
+(name).rotate(45);
+*/
