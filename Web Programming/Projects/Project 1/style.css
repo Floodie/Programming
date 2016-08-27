@@ -1,0 +1,33 @@
+*{
+    font-family: Arial;
+    margin:0px;
+    padding:0px;
+}
+#menu>li{
+    float:left;
+    list-style: none;
+}
+
+#sub li {
+    display: block;
+}
+
+#menu a{
+    padding:10px;
+    display: inline-block;
+    border:1px solid #b7b7b7;
+    background: #71797e;
+    width:95px;
+    text-decoration: none;
+    margin:2px;
+    color:white;
+    font-size:18px;
+}
+
+#sub{
+    display: none;
+}
+
+#menu>li>a:hover+#sub{
+    display: block;
+}

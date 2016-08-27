@@ -1,0 +1,39 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: Roboto Condensed;
+	color:#373A3C;
+}
+
+body{
+	font-size:24px;
+	margin-top:20px;
+}
+
+h1{
+	font-size: 36px;
+}
+
+nav a{
+	text-transform: uppercase;
+	text-align:center;
+	width: 250px;
+	display: block;
+	border: 1px solid black;
+	text-decoration: none;
+	color:#373A3C;
+}
+
+nav a:hover{
+	text-decoration: none;
+	color:white;
+	background: #04E2D0;
+}
+
+p{
+	height: 200px;
+	padding: 2px 5px;
+	overflow: hidden;
+	border:1px solid black;
+	text-align: center;
+}

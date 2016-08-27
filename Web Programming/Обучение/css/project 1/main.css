@@ -1,0 +1,45 @@
+*{
+	font-family: Arial;
+}
+
+a{
+	text-decoration: none;
+	color:#999;
+}
+
+header h1{
+	color: #444;
+	display: inline;
+	margin-left: 200px;
+}
+
+input {
+	position: absolute;
+	right: 0px;
+	margin-right: 190px;
+	margin-top: 7px;
+}
+
+nav{
+	margin-left: 200px;
+	margin-top: 20px;
+	
+}
+
+nav a{
+	border: 1px solid #DBDBDB;
+	background:#E3E3E3;
+	text-align:center;
+	font-size:36px;
+	margin-left:-4px;
+	padding: 2px 30px;
+	transition: color,background .4s ease-out;
+}
+
+nav a:hover{
+	color:white;
+	background: #3BCEFF;
+	border:1px solid #3BCEFF;
+}
+
+nav li{}
