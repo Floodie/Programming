@@ -28,9 +28,9 @@ int main()
                 window.close();
         }
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::P)){paint=true;}
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::G)&&paint==true)
-            {
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::P)){paint=true;}//Если нажимаеться 'P', то включаеться режим рисования.
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)&&paint==true)//Сохроняет координаты и считает первый шаг.
+        {
                 paint=false;
                 lx[1]=point[1][1];
                 lx[2]=point[2][1];
@@ -42,24 +42,22 @@ int main()
                     point[i][1]=(point[i][1]+point[i][2])%500;
                     point[i][2]=(oldX+(2*point[i][2]))%500;
                 }
-            }
+        }
 
-        if(paint==false)
+        if(paint==false)//Сама процедура кота-арнольда
         {
             if((lx[1]==point[1][1])&&(ly[2]==point[2][2])){}
-            else
-            {
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-            {
-                for(int i=1;i<qwe;i++)
-                {
-                    int oldX=point[i][1];
-                    point[i][1]=(point[i][1]+point[i][2])%500;
-                    point[i][2]=(oldX+(2*point[i][2]))%500;
-                }
+            else{
+            	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+	            {
+	                for(int i=1;i<qwe;i++)
+	                {
+	                    int oldX=point[i][1];
+	                    point[i][1]=(point[i][1]+point[i][2])%500;
+	                    point[i][2]=(oldX+(2*point[i][2]))%500;
+	                }
+	            }     
             }
-            }
-
             window.clear();
             for(int i=1;i<qwe;i++)
             {
@@ -69,7 +67,7 @@ int main()
             window.display();
         }
 
-        if(paint==true)
+        if(paint==true)//Рисование
         {        
             if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
                 {
