@@ -1,0 +1,50 @@
+body {
+  background-color: #fff;
+  font-family: "Ubuntu Condensed", sans-serif; }
+
+#page-wrapper .container-fluid {
+  max-width: 1600px; }
+
+#page-wrapper > .container-fluid {
+  padding-top: 15px; }
+
+#heading {
+  background-color: #eee;
+  padding: 30px; }
+
+h4 {
+  font-weight: bold;
+  margin: 10px auto; }
+
+img {
+  max-width: 100%; }
+
+#page-wrapper > nav {
+  border-radius: 0 !important;
+  background: #2861ef !important; }
+  #page-wrapper > nav a {
+    font-size: 1.1rem;
+    color: #fff !important; }
+    #page-wrapper > nav a:hover {
+      color: #000 !important; }
+  #page-wrapper > nav button {
+    background: #fff !important; }
+    #page-wrapper > nav button:hover {
+      color: #2861ef !important; }
+
+.s-block {
+  margin-bottom: 30px; }
+
+.records > div {
+  margin-bottom: 30px; }
+  .records > div:last-child {
+    margin-bottom: 0; }
+
+footer.footer {
+  margin-top: 30px; }
+
+.info-boxes > div {
+  margin-bottom: 10px;
+  padding: 15px; }
+  .info-boxes > div:last-child {
+    margin-bottom: 0; }

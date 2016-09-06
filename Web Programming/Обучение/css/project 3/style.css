@@ -1,0 +1,125 @@
+*{
+	font-family: Arial;
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+	background: #151515;
+}
+
+/* Head */
+
+header{
+	background: #34352F;
+}
+
+header ul{
+	margin-left:150px;
+}
+
+header ul li{
+	display: inline-block;
+	color:white;
+	font-weight: 900;
+	font-size:36px;
+	padding: 10px;
+	padding-left: 9px;
+	padding-right:9px;
+	min-width: 304px;
+	margin-right: -4px;
+	text-align: center;
+	border-left:1px solid #171814;
+	border-right:1px solid #171814;
+}
+
+header ul li a{   
+
+}
+
+header ul li:hover{
+	background:#171814; 
+	color:white;
+	cursor:pointer;
+}
+
+/* Left */
+
+#left{
+	float:left;
+	margin-left: 150px;
+	margin-top:50px;
+	display:inline-block;
+}
+
+/* Account */
+
+#account{
+	display:inline-block;
+	border:1px solid #171814;
+	min-width: 304px;
+	padding:10px;
+	background:#34352F;
+	color:white;
+	font-size:36px;
+	font-weight:900;
+}
+
+#account img{
+	float:left;
+	width: 50px;
+	border:1px solid #171814;
+	background: white;
+}
+
+#name{
+	display: inline-block;
+	margin-left: 15px;
+	margin-top: 7px;
+}
+
+#money{
+	margin-top:15px;
+	padding-top:10px;
+	font-size:24px;
+	border-top:1px solid #171814;
+}
+
+#money:after{
+	content:"10 р.";
+	font-size:26px;
+}
+
+/* Sidebar */
+
+#sidebar{
+	margin-top:20px;
+	background: #34352F;
+	color:white;
+	font-weight:900;
+	font-size:36px;
+	padding-left: 20px;
+	padding-top:10px;
+	padding-bottom: 10px;
+}
+
+#news{
+	background:#464741;
+	color:white;
+	font-size:24px;
+	padding: 10px;
+	padding-left:20px;
+	min-height: 612px;
+}
+
+#content{
+	clear:both;
+	display: inline-block;
+	color:white;
+	margin:50px;
+	background: #34352F;
+	width: 1165px;
+	height: 765px;
+	padding:40px;
+	font-size:24px;
+}

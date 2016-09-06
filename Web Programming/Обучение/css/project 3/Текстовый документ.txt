@@ -1,0 +1,51 @@
+*{
+	font-family: Arial;
+	padding: 0px;
+	margin: 0px;
+}
+
+/* Head */
+
+header{
+	background: #34352F;
+}
+
+header ul{
+	margin-left:150px;
+}
+
+header ul li{
+	display: inline-block;
+	color:white;
+	font-weight: 900;
+	font-size:36px;
+	padding: 10px;
+	padding-left: 9px;
+	padding-right:9px;
+	min-width: 304px;
+	margin-right: -4px;
+	text-align: center;
+	border-left:1px solid #171814;
+	border-right:1px solid #171814;
+}
+
+header ul li:hover{
+	background:#171814; 
+	color:white;
+	cursor:pointer;
+}
+
+/* Account */
+
+#account{
+	margin-left: 150px;
+	margin-top:50px;
+	border:1px solid #171814;
+	display:inline-block;
+	min-width: 320px;
+	padding:10px;
+}
+
+div:before{
+	content:"Photo";
+}
