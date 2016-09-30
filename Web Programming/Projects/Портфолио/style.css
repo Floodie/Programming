@@ -1,0 +1,51 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+#block{
+    height: 150px;
+    width: 600px;
+    display: inline-block;
+}
+
+#frame{
+    float:left;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background:Red;
+    transition:border-radius .5s ease-in-out;
+}
+
+#info{
+    float:left;
+    width:0px;
+    height:0px;
+    background:green;
+    transition:width .5s ease-in-out .1s,height .5s ease-in-out .1s;
+}
+
+#text{
+    padding-left:10px;
+    padding-top:30px;
+    color:white;
+    font-size:24px;
+    visibility: hidden;
+    transition: visibility .2s ease .3s;
+}
+
+#block:hover>#frame{
+    border-radius: 0%;
+}
+
+#block:hover>#info{
+    width:450px;
+    height:150px;
+}
+
+#block:hover>#info>#text{
+    visibility: visible;
+}

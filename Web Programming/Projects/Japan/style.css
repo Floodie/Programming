@@ -1,0 +1,111 @@
+/* Основные свойства */
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+#page{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+body{
+    background:url(images/footer_lodyas.png);
+}
+
+/*              */
+/* Меню - шапка */
+/*              */
+
+
+#head ul{
+    list-style: none;
+    text-align: center;
+}
+
+#head li{
+    display: inline-block;
+}
+
+#head li a{
+    text-decoration: none;
+    color:#ddeeff;
+    padding:15px;
+    font-size: 36px;
+    background:#112233;
+    margin:-2px;
+    display: inline-block;
+    border-right: 1px solid #334455;
+    height: 64px;
+}
+
+#head li:nth-child(3) a{
+    border-bottom:2px solid #99aabb;
+}
+
+#head li:last-child a{
+    border-right: none;
+}
+
+#head li a:hover{
+    background:#223344;
+}
+
+#head li:nth-child(3) a:hover{
+    background:#112233;
+    cursor: default;
+}
+
+/*                 */
+/* Контентная часть*/
+/*                 */
+
+
+#lang{
+    color:white;
+    margin-top:20px;
+    margin-left:400px;
+    display: inline-block;
+}
+
+#japan:checked ~ #japan,
+#russia:checked ~ #russia{
+    display: block;
+}
+
+label{
+    display: none;
+}
+
+table{
+    margin: 20px auto;
+}
+
+td{
+    color:#fff;
+    width:450px;
+    font-size:22px;
+    padding:0px 10px;
+}
+
+td:nth-child(2n-1)
+{
+    text-align: right;
+}
+
+td:nth-child(2n)
+{
+    text-align: left;
+}
+
+tr:nth-child(2n-1) td:nth-child(2n-1),
+tr:nth-child(2n-1) td:nth-child(2n){
+    background:rgba(162, 255, 165, 0.6);
+}
+
+tr:nth-child(2n) td:nth-child(2n-1),
+tr:nth-child(2n) td:nth-child(2n){
+    background:rgba(189, 223, 255, 0.6);
+}
