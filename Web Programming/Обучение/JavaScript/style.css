@@ -2,4 +2,22 @@
     margin:0px;
     padding:0px;
     font-family: Arial;
+    font-size: 27px;
 }
+
+.none{
+	color:black;
+}
+
+.red{
+	color:red;
+}
+
+.green{
+	color:green;
+}
+
+.blue{
+	color:blue;
+}
+
