@@ -1,111 +1,68 @@
-/* Основные свойства */
 *{
     margin:0px;
     padding:0px;
-    box-sizing: border-box;
     font-family: Arial;
-}
-
-#page{
-    width: 1000px;
-    margin: 0 auto;
+    font-size: 16px;
 }
 
 body{
-    background:url(images/footer_lodyas.png);
+	background-image: url(image/footer_lodyas.png);
 }
 
-/*              */
-/* Меню - шапка */
-/*              */
-
-
-#head ul{
-    list-style: none;
-    text-align: center;
+.buttons{
+	text-align: center;
 }
 
-#head li{
-    display: inline-block;
+.change{
+	background: #ccc;
+	cursor: default;
+	display: inline-block;
+	border:2px groove #556677;
+	padding: 10px;
+	margin: 30px;
 }
 
-#head li a{
-    text-decoration: none;
-    color:#ddeeff;
-    padding:15px;
-    font-size: 36px;
-    background:#112233;
-    margin:-2px;
-    display: inline-block;
-    border-right: 1px solid #334455;
-    height: 64px;
+.passive:hover{
+	cursor: pointer;
+	background:#445566;
+	color:#eeffff;
 }
 
-#head li:nth-child(3) a{
-    border-bottom:2px solid #99aabb;
+.passive:active{
+	cursor: progress;
+	background:#334455;
+	color:#eeffff;
 }
 
-#head li:last-child a{
-    border-right: none;
+.active{
+	background:#778899;
+	color:#ddeeff;
 }
 
-#head li a:hover{
-    background:#223344;
-}
-
-#head li:nth-child(3) a:hover{
-    background:#112233;
-    cursor: default;
-}
-
-/*                 */
-/* Контентная часть*/
-/*                 */
-
-
-#lang{
-    color:white;
-    margin-top:20px;
-    margin-left:400px;
-    display: inline-block;
-}
-
-#japan:checked ~ #japan,
-#russia:checked ~ #russia{
-    display: block;
-}
-
-label{
-    display: none;
+#japantable{
+	display: none;
 }
 
 table{
-    margin: 20px auto;
+	margin:0 auto;
+	border: 4px groove #aabbcc;
+	margin-bottom:50px;
 }
 
 td{
-    color:#fff;
-    width:450px;
-    font-size:22px;
-    padding:0px 10px;
+	border:2px groove #778899;
+	width:400px;
+	padding: 7px 15px;
 }
 
-td:nth-child(2n-1)
-{
-    text-align: right;
+tr:nth-child(2n-1){
+	background:#aabbcc;
 }
 
-td:nth-child(2n)
-{
-    text-align: left;
+tr:nth-child(2n){
+	background:#ccbbaa;
 }
 
-tr:nth-child(2n-1) td:nth-child(2n-1),
-tr:nth-child(2n-1) td:nth-child(2n){
-    background:rgba(162, 255, 165, 0.6);
-}
-
-tr:nth-child(2n) td:nth-child(2n-1),
-tr:nth-child(2n) td:nth-child(2n){
-    background:rgba(189, 223, 255, 0.6);
+td:nth-child(2n-1){
+	text-align: right;
 }

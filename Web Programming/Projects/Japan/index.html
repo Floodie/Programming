@@ -2,74 +2,151 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Изучение JavaScript</title>
     <link rel="stylesheet" href="style.css">
-    <title>My site</title>
 </head>
 <body>
-    <div id="page-wrapper">
-        <div id="page">
-            <!--
-            Пока, что уберем меню, чтобы не мешало!
-            <div id="head">
-                <ul>
-                    <li><a href="#">Главная страница</a></li>
-                    <li><a href="#">Все уроки</a></li>
-                    <li><a href="#">Словарь</a></li>
-                    <li><a href="#">Об сайте</a></li>
-                </ul>
-            </div>
-            -->
-            <div id="body">
-                <div id="lang">Японско-Русский</div>
-                <input type="radio" id="japan" name="laung" ><br>
-                <div id="lang">Русско-Японский</div>
-                <input type="radio" id="russia" name="laung" checked>
-                <label id="japan">
-                    <table>
-                        Данный раздел в разработке!
-                    </table>
-                </label>
-            
-                <label id="russia">
-                    <table>
-                        <tr><td>Апельсин</td>   <td>Микан</td></tr>
-                        <tr><td>Банан</td>   <td>Банана</td></tr>
-                        <tr><td>Да</td>   <td>Хай</td></tr>
-                        <tr><td>Италия</td>   <td>Итариа</td></tr>
-                        <tr><td>Кино</td>   <td>Эига</td></tr>
-                        <tr><td>Кофе</td>   <td>Кохи</td></tr>
-                        <tr><td>Мясо</td>   <td>Нико</td></tr>
-                        <tr><td>Национальность</td>   <td>Джин</td></tr>
-                        <tr><td>Нет</td>   <td>Иие</td></tr>
-                        <tr><td>Обувь</td>   <td>Кутсу</td></tr>
-                        <tr><td>Овощи</td>   <td>Ясаи</td></tr>
-                        <tr><td>Пиво</td>   <td>Биру</td></tr>
-                        <tr><td>Приятно познакомиться</td>   <td>Хадзимемаште</td></tr>
-                        <tr><td>Прошу любить и жаловать</td>   <td>До:зо ёрошку о негасимас</td></tr>
-                        <tr><td>Рис</td>   <td>Гохан</td></tr>
-                        <tr><td>Россия</td>   <td>Рошиа</td></tr>
-                        <tr><td>Рыба</td>   <td>Сакана</td></tr>
-                        <tr><td>Саке</td>   <td>Осаке</td></tr>
-                        <tr><td>Сок</td>   <td>Джусу</td></tr>
-                        <tr><td>Суика</td>   <td>Кабан</td></tr>
-                        <tr><td>Телевизор</td>   <td>Тереби</td></tr>
-                        <tr><td>Тоже</td>   <td>Мо</td></tr>
-                        <tr><td>Франция</td>   <td>Фурансу</td></tr>
-                        <tr><td>Фрукты</td>   <td>Кудамоно</td></tr>
-                        <tr><td>Футболка</td>   <td>Тишатсу</td></tr>
-                        <tr><td>Хлеб</td>   <td>Пан</td></tr>
-                        <tr><td>Часы</td>   <td>Токей</td></tr>
-                        <tr><td>Что</td>   <td>Нан</td></tr>
-                        <tr><td>Это(близко)</td>   <td>Коре</td></tr>
-                        <tr><td>Это(далеко)</td>   <td>Аре</td></tr>
-                        <tr><td>Это(у собеседника)</td>   <td>Соре</td></tr>
-                        <tr><td>Я</td>   <td>Ваташи ва</td></tr>
-                        <tr><td>Яблоко</td>   <td>Ринго</td></tr>
-                        <tr><td>Япония</td>   <td>Нихон</td></tr>
-                    </table>
-                </label>
-            <div id="footer"></div>
-        </div>
-    </div>
+	<div id="page-wrapper">
+		<div class="buttons">
+			<div class="change passive" id="japan" onclick="hide('russian', 'japan')" onselectstart="return false" onmousedown="return false">Японско-Русский</div>
+			<div class="change active" id="russian" onclick="hide('japan', 'russian')" onselectstart="return false" onmousedown="return false">Русско-Японский</div>
+		</div>
+		<table id="japantable">
+			<tr>
+				<td>Ринго</td>
+				<td>Яблоко</td>
+			</tr>
+			<tr>
+				<td>Кабан</td>
+				<td>Сумка</td>
+			</tr>
+			<tr>
+				<td>Джусу</td>
+				<td>Сок</td>
+			</tr>
+			<tr>
+				<td>Кутсу</td>
+				<td>Ботинки</td>
+			</tr>
+		</table>
+
+		<table id="russiantable">
+			<tr><td>1 </td><td> Ичи</td></tr>
+			<tr><td>10 </td><td> Джу</td></tr>
+			<tr><td>100 </td><td> Хяку</td></tr>
+			<tr><td>1000 </td><td> Сэн</td></tr>
+			<tr><td>2 </td><td> Ни</td></tr>
+			<tr><td>3 </td><td> Сан</td></tr>
+			<tr><td>4 </td><td> Ши/Йон</td></tr>
+			<tr><td>5 </td><td> Го</td></tr>
+			<tr><td>6 </td><td> Року</td></tr>
+			<tr><td>7 </td><td> Нана/Сити</td></tr>
+			<tr><td>8 </td><td> Хачи</td></tr>
+			<tr><td>9 </td><td> Ку/Кю:</td></tr>
+			<tr><td>Апельсин </td><td> Микан</td></tr>
+			<tr><td>Бабушка </td><td> Собо</td></tr>
+			<tr><td>Баклажан </td><td> Насу</td></tr>
+			<tr><td>Банан </td><td> Банана</td></tr>
+			<tr><td>Большое спасибо </td><td> ДоМо Аригато Гозаимас</td></tr>
+			<tr><td>Боши </td><td> Шапка</td></tr>
+			<tr><td>Вилка </td><td> Фоку</td></tr>
+			<tr><td>Водитель </td><td> Унтенсю</td></tr>
+			<tr><td>Врач </td><td> Ися</td></tr>
+			<tr><td>Глаз </td><td> Ме</td></tr>
+			<tr><td>Да </td><td> Хай</td></tr>
+			<tr><td>Дедушка </td><td> Софу</td></tr>
+			<tr><td>Доброе утро </td><td> Охаё Гозаимас</td></tr>
+			<tr><td>Добрый вечер </td><td> Конбанва</td></tr>
+			<tr><td>Домохозяйка </td><td> Сюфу</td></tr>
+			<tr><td>Жена </td><td> Цума/Канаи</td></tr>
+			<tr><td>Зеленый чай </td><td> Оча</td></tr>
+			<tr><td>Инженер </td><td> Гиси</td></tr>
+			<tr><td>Италия </td><td> Итариа</td></tr>
+			<tr><td>Капуста </td><td> Кябэцу</td></tr>
+			<tr><td>Картофель </td><td> Дзягаимо</td></tr>
+			<tr><td>Кино </td><td> Еига</td></tr>
+			<tr><td>Книга </td><td> Хон</td></tr>
+			<tr><td>Корова </td><td> Уши</td></tr>
+			<tr><td>Кофе </td><td> Кохи</td></tr>
+			<tr><td>Ложка </td><td> Спун</td></tr>
+			<tr><td>Лошадь </td><td> Ума</td></tr>
+			<tr><td>Мама </td><td> Хаха</td></tr>
+			<tr><td>Медсестра </td><td> Кангофу</td></tr>
+			<tr><td>Министр инностранных дел </td><td> Гаймудайдин</td></tr>
+			<tr><td>Море </td><td> Уми</td></tr>
+			<tr><td>Морковь </td><td> Ниндзин</td></tr>
+			<tr><td>Мороженое </td><td> Айсукуриму</td></tr>
+			<tr><td>Муж </td><td> Сюдзин</td></tr>
+			<tr><td>Музыкант </td><td> Онгакука</td></tr>
+			<tr><td>Мясо </td><td> Нико</td></tr>
+			<tr><td>Национальность </td><td> Джин</td></tr>
+			<tr><td>Немного </td><td> Чото</td></tr>
+			<tr><td>Нет </td><td> Иие</td></tr>
+			<tr><td>Нравиться </td><td> Суки(Ски)</td></tr>
+			<tr><td>Овощи </td><td> Ясаи</td></tr>
+			<tr><td>Огурец </td><td> Кюри</td></tr>
+			<tr><td>Падеж направления </td><td> Э</td></tr>
+			<tr><td>Палочки для суши </td><td> Хаси</td></tr>
+			<tr><td>Папа </td><td> Тити</td></tr>
+			<tr><td>Парикмахер </td><td> Биёси</td></tr>
+			<tr><td>Перец </td><td> Пиман</td></tr>
+			<tr><td>Пиво </td><td> Биру</td></tr>
+			<tr><td>Пожалуйста(когда даешь, чтолибо) </td><td> ДоЗо</td></tr>
+			<tr><td>Полицейский </td><td> Кэисацу</td></tr>
+			<tr><td>Президент </td><td> Дойторё</td></tr>
+			<tr><td>Привет </td><td> Конничива</td></tr>
+			<tr><td>Приятно познакомиться </td><td> Хадзимемашите</td></tr>
+			<tr><td>Программист </td><td> Пурагурамисто</td></tr>
+			<tr><td>Продавец </td><td> Тенин</td></tr>
+			<tr><td>Проффесия </td><td> Сёкугё</td></tr>
+			<tr><td>Прошу любить и жаловать </td><td> ДоЗо Ёросику О Негасимас</td></tr>
+			<tr><td>Птица </td><td> Тори</td></tr>
+			<tr><td>Работа </td><td> Сигото</td></tr>
+			<tr><td>Рис </td><td> Гохан</td></tr>
+			<tr><td>Родители </td><td> Рёсин</td></tr>
+			<tr><td>Родительный падеж </td><td> Но</td></tr>
+			<tr><td>Россия </td><td> Рошиа</td></tr>
+			<tr><td>Ручка </td><td> Пэн</td></tr>
+			<tr><td>Рыба </td><td> Сакана</td></tr>
+			<tr><td>Саке </td><td> Осаке</td></tr>
+			<tr><td>Семья </td><td> Казоку</td></tr>
+			<tr><td>Служащий компании </td><td> Кайсяин</td></tr>
+			<tr><td>Сок </td><td> Джусу</td></tr>
+			<tr><td>Спасибо </td><td> Аригато Гозаимас</td></tr>
+			<tr><td>Спасибо(не вежливо) </td><td> Аригато</td></tr>
+			<tr><td>Студент </td><td> Гакусэй</td></tr>
+			<tr><td>Сумка </td><td> Кабан</td></tr>
+			<tr><td>Суфикст возраста </td><td> Саи</td></tr>
+			<tr><td>Суши </td><td> Суси</td></tr>
+			<tr><td>Телевизор </td><td> Тереби</td></tr>
+			<tr><td>Телефон </td><td> Денва</td></tr>
+			<tr><td>Тетрадь </td><td> Ното</td></tr>
+			<tr><td>Тоже </td><td> Мо</td></tr>
+			<tr><td>Туфли </td><td> Кутсу</td></tr>
+			<tr><td>Учитель </td><td> Сенсей</td></tr>
+			<tr><td>Франция </td><td> Фурансу</td></tr>
+			<tr><td>Фрукты </td><td> Кудамоно</td></tr>
+			<tr><td>Футболка </td><td> Тишатсу</td></tr>
+			<tr><td>Хлеб </td><td> Пан</td></tr>
+			<tr><td>Художник </td><td> Гака</td></tr>
+			<tr><td>Цветок </td><td> Хана</td></tr>
+			<tr><td>Цена </td><td> Икура</td></tr>
+			<tr><td>Час </td><td> Джи</td></tr>
+			<tr><td>Часы </td><td> Токей</td></tr>
+			<tr><td>Черный чай </td><td> Коча</td></tr>
+			<tr><td>Что </td><td> Нан</td></tr>
+			<tr><td>Школьник </td><td> Сэйто</td></tr>
+			<tr><td>Шоколад </td><td> Чокоретто</td></tr>
+			<tr><td>Это(близко) </td><td> Коре</td></tr>
+			<tr><td>Это(далеко) </td><td> Аре</td></tr>
+			<tr><td>Это(у собеседника) </td><td> Соре</td></tr>
+			<tr><td>Я </td><td> Ваташи</td></tr>
+			<tr><td>Я не знаю </td><td> Ваташи Ва Вакаримасен</td></tr>
+			<tr><td>Яблоко </td><td> Ринго</td></tr>
+			<tr><td>Яйцо </td><td> Тамаго</td></tr>
+			<tr><td>Япония </td><td> Нихон</td></tr>
+	</table>
+	</div>
+	<script src="script.js" type="text/javascript"></script>
 </body>
 </html>
